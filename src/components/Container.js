@@ -78,10 +78,11 @@ const Container = ({ children }) => {
         bg={bgColor[colorMode]}
         color={primarytextColor[colorMode]}
         px={8}
+        borderBottomWidth={1}
       >
         {children}
-        <Footer />
       </Flex>
+      <Footer />
     </>
   );
 };

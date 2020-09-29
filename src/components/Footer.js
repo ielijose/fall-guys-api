@@ -2,9 +2,9 @@ import { Flex, IconButton, Link, Stack } from '@chakra-ui/core';
 import NextLink from 'next/link';
 
 const Footer = () => (
-  <Flex align="center" mb={4} direction="column">
+  <Flex align="center" mt={6} direction="column">
     <div>
-      <NextLink href="//github.com/ielijose" passHref>
+      <NextLink href="https://github.com/ielijose" passHref>
         <Link
           fontSize="md"
           color="gray.500"
@@ -16,7 +16,7 @@ const Footer = () => (
         </Link>
       </NextLink>
     </div>
-    <Stack flexDirection="row" mt={4}>
+    <Stack flexDirection="row" mt={2}>
       <Link href="https://twitter.com/ielijose" title="Twitter" isExternal>
         <IconButton
           aria-label="Twitter"
