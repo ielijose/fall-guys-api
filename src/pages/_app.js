@@ -8,9 +8,11 @@ import { css, Global } from '@emotion/core';
 import { MDXProvider } from '@mdx-js/react';
 import { DefaultSeo } from 'next-seo';
 import Head from 'next/head';
-import React from 'react';
+import { useRouter } from 'next/router';
+import React, { useEffect } from 'react';
 import SEO from '../../next-seo.config';
 import MDXComponents from '../components/MDXComponents';
+import * as gtag from '../lib/gtag';
 import { prismDarkTheme, prismLightTheme } from '../styles/prism';
 import theme from '../styles/theme';
 
@@ -42,6 +44,19 @@ const GlobalStyle = ({ children }) => {
 };
 
 const App = ({ Component, pageProps }) => {
+  const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      if (process.env.NODE_ENV === 'production') {
+        gtag.pageview(url);
+      }
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <ThemeProvider theme={theme}>
       <MDXProvider components={MDXComponents}>
