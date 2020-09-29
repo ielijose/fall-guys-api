@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prettier": "prettier --write \"**/*.{html,js,json,md,mdx,yml}\"",
+    "postinstall": "patch-package"
   },
   "repository": {
     "type": "git",
@@ -19,10 +21,50 @@
     "mongoose": "^5.10.3",
     "next": "^9.5.3",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "@chakra-ui/core": "0.8.0",
+    "@emotion/core": "10.0.35",
+    "@emotion/styled": "10.0.27",
+    "@mapbox/rehype-prism": "0.5.0",
+    "@mdx-js/loader": "1.5.8",
+    "@mdx-js/react": "1.5.8",
+    "@next/mdx": "9.5.3",
+    "babel-plugin-import-glob-array": "0.2.0",
+    "big.js": "5.2.2",
+    "comma-number": "2.0.1",
+    "date-fns": "2.16.1",
+    "emotion-theming": "10.0.27",
+    "fathom-client": "3.0.0",
+    "firebase": "7.19.1",
+    "firebase-admin": "9.1.1",
+    "googleapis": "48.0.0",
+    "iframe-resizer-react": "^1.0.4",
+    "mdx-prism": "0.3.1",
+    "next-google-fonts": "1.2.1",
+    "next-mdx-enhanced": "4.0.0",
+    "next-seo": "4.7.3",
+    "patch-package": "6.2.2",
+    "postinstall-postinstall": "2.1.0",
+    "react-tweet-embed": "1.2.2",
+    "reading-time": "1.2.0",
+    "remark-autolink-headings": "6.0.1",
+    "remark-capitalize": "1.1.0",
+    "remark-code-titles": "0.1.1",
+    "remark-slug": "6.0.0",
+    "swr": "0.3.2",
+    "unsplash-js": "6.0.0"
   },
   "devDependencies": {
     "eslint": "^7.8.1",
-    "eslint-plugin-react": "^7.20.6"
+    "eslint-plugin-react": "^7.20.6",
+    "globby": "11.0.1",
+    "prettier": "2.1.1",
+    "rehype": "11.0.0"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "none"
   }
 }

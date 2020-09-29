@@ -1,0 +1,76 @@
+---
+title: 'Skins'
+---
+
+### Get all skins
+
+You can access the list of skins grouped by type using the `/skins` endpoint.
+
+```json
+https://fallguysapi.com/api/skins/
+```
+
+```json
+[
+  {
+    "celebration": [],
+    "color": [],
+    "emote": [],
+    "face": [],
+    "lower": [],
+    "pattern": [],
+    "upper": []
+  }
+]
+```
+
+### Get skins by type
+
+You can get skins by type by adding the `type` as a parameter: `/skins/upper`
+
+```json
+https://fallguysapi.com/api/skins/upper
+```
+
+```json
+[
+  {
+    "_id": "5f315e67d098522e444a654d",
+    "name": "Topsy",
+    "slug": "Topsy",
+    "icon": "https://cdn.esportinfo.gg/fallguy/img/skins/Topsy-Upper-icon.png",
+    "price": 3500,
+    "currency": "Kudos",
+    "rarity": "Uncommon",
+    "acquire": "Store",
+    "image": "https://cdn.esportinfo.gg/fallguy/img/skins/Topsy-Upper.png",
+    "description": null,
+    "type": "upper"
+  }
+  // ...
+]
+```
+
+### Get a single skin
+
+You can get a single skin by adding the `id` as a parameter: `/skins/upper/5f315e67d098522e444a654d`
+
+```json
+https://fallguysapi.com/api/skins/upper/5f315e67d098522e444a654d
+```
+
+```json
+{
+  "_id": "5f315e67d098522e444a654d",
+  "name": "Topsy",
+  "slug": "Topsy",
+  "icon": "https://cdn.esportinfo.gg/fallguy/img/skins/Topsy-Upper-icon.png",
+  "price": 3500,
+  "currency": "Kudos",
+  "rarity": "Uncommon",
+  "acquire": "Store",
+  "image": "https://cdn.esportinfo.gg/fallguy/img/skins/Topsy-Upper.png",
+  "description": null,
+  "type": "upper"
+}
+```

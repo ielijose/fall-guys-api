@@ -1,0 +1,56 @@
+---
+title: 'Rounds'
+---
+
+### Get all rounds
+
+You can access the list of rounds by using the `/rounds` endpoint.
+
+```json
+https://fallguysapi.com/api/rounds/
+```
+
+```json
+[
+  {
+    "_id": "5f5231ec2a7a2d59f9a2386f",
+    "title": "Dizzy Heights",
+    "slug": "dizzy-heights",
+    "description": "Dash through a dizzying array of obstacles to reach the finish line! Spinning plates, rolling balls and yet more spinning plates stand between your Fall Guy and qualification. Keep your eye on the prize or end up eliminated! ",
+    "goal": null,
+    "size": "Large",
+    "type": "Race",
+    "designer": "Joseph Juson",
+    "previewImage": "https://images.ctfassets.net/vsmfukibxsuz/6RFRPl1i0AcFDrMbS9yPPg/c82c34c18533c76cbd46623523ce9c5c/dizzy-heights-thumb.png",
+    "socialShareImage": "https://images.ctfassets.net/vsmfukibxsuz/2aq0UIEuBQHtmMr79XVsGR/a041221fa44b34bdcbb8a77b105d763f/dizzy-heights-social.jpg",
+    "blurredBackground": "https://images.ctfassets.net/vsmfukibxsuz/60iRnNMZoa0hu3G7RVEdOp/b21b7e7f3a40b376efb52216e33fb7ee/dizzy-heights-bg-small.jpg",
+    "video": "https://d2tpkt7xt6hsxa.cloudfront.net/dizzy-heights.mp4"
+  }
+  // ...
+]
+```
+
+### Get a single round
+
+You can get a single round by adding the `id` as a parameter: `/rounds/5f5231ec2a7a2d59f9a2386f`
+
+```json
+https://fallguysapi.com/api/rounds/5f5231ec2a7a2d59f9a2386f
+```
+
+```json
+{
+  "_id": "5f5231ec2a7a2d59f9a2386f",
+  "title": "Dizzy Heights",
+  "slug": "dizzy-heights",
+  "description": "Dash through a dizzying array of obstacles to reach the finish line! Spinning plates, rolling balls and yet more spinning plates stand between your Fall Guy and qualification. Keep your eye on the prize or end up eliminated! ",
+  "goal": null,
+  "size": "Large",
+  "type": "Race",
+  "designer": "Joseph Juson",
+  "previewImage": "https://images.ctfassets.net/vsmfukibxsuz/6RFRPl1i0AcFDrMbS9yPPg/c82c34c18533c76cbd46623523ce9c5c/dizzy-heights-thumb.png",
+  "socialShareImage": "https://images.ctfassets.net/vsmfukibxsuz/2aq0UIEuBQHtmMr79XVsGR/a041221fa44b34bdcbb8a77b105d763f/dizzy-heights-social.jpg",
+  "blurredBackground": "https://images.ctfassets.net/vsmfukibxsuz/60iRnNMZoa0hu3G7RVEdOp/b21b7e7f3a40b376efb52216e33fb7ee/dizzy-heights-bg-small.jpg",
+  "video": "https://d2tpkt7xt6hsxa.cloudfront.net/dizzy-heights.mp4"
+}
+```

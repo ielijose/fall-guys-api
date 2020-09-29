@@ -1,0 +1,28 @@
+---
+title: 'Introduction'
+---
+
+This documentation will help you get familiar with the resources of the **Fall Guys API** and show you how to consume the different resources.
+
+### REST
+
+**Base url:** https://fallguysapi.com/api/
+
+The base url contains information about all available API's resources.
+All requests are `GET` requests and go over `https`. All responses will return data in `json`.
+
+```json
+https://fallguysapi.com/api/
+```
+
+```json
+{
+  "rounds": "https://fallguysapi.com/api/rounds",
+  "skins": "https://fallguysapi.com/api/skins"
+}
+```
+
+There are currently three available resources:
+
+- [Rounds](/rounds): used to get all the rounds.
+- [Skins](/skins): used to get all the skins.
