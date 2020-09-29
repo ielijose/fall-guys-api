@@ -5,7 +5,7 @@ import DocsSeo from '../components/DocsSeo';
 import Sidebar from '../components/Sidebar';
 
 const editUrl = (slug) =>
-  `https://github.com/ielijose/fall-guys-api/edit/master/pages/${slug}.mdx`;
+  `https://github.com/ielijose/fall-guys-api/edit/master/src/pages/${slug}.mdx`;
 
 export default function BlogLayout({ children, frontMatter }) {
   const slug = frontMatter.__resourcePath.replace('.mdx', '');
