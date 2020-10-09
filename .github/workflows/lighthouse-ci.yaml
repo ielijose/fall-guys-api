@@ -6,19 +6,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Use Node.js 12.x
+      - name: Use Node.js 10.x
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 10.x
       - name: yarn
         run: |
-          yarn
+          npm install
       - name: build
         run: |
-          yarn build
+          npm run build
       - name: start
         run: |
-          yarn start
+          npm start
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.3.x
