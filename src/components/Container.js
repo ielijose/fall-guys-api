@@ -10,6 +10,7 @@ import NextLink from 'next/link';
 import React from 'react';
 import Footer from './Footer';
 import Logo from './Logo';
+import { event } from '../lib/gtag';
 
 const Container = ({ children }) => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -25,6 +26,27 @@ const Container = ({ children }) => {
   const navBgColor = {
     light: 'rgba(255, 255, 255, 0.8)',
     dark: 'rgba(23, 25, 35, 0.8)'
+  };
+
+  const trackGithubRepoClick = () => {
+    const e = {
+      action: 'click-header-github-repo',
+      category: 'clicks',
+      label: 'github-repo',
+      value: new Date()
+    };
+    event(e);
+  };
+
+  const handleToggle = () => {
+    const e = {
+      action: `toggle-theme-${colorMode}`,
+      category: 'clicks',
+      label: `theme`,
+      value: colorMode
+    };
+    event(e);
+    toggleColorMode();
   };
 
   return (
@@ -55,6 +77,7 @@ const Container = ({ children }) => {
             title="GitHub"
             isExternal
             px={2}
+            onClick={trackGithubRepoClick}
           >
             <IconButton
               aria-label="GitHub"
@@ -67,7 +90,7 @@ const Container = ({ children }) => {
           <IconButton
             aria-label="Toggle dark mode"
             icon={colorMode === 'dark' ? 'sun' : 'moon'}
-            onClick={toggleColorMode}
+            onClick={handleToggle}
           />
         </Box>
       </Flex>
