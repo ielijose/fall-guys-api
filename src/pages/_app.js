@@ -12,6 +12,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
 import SEO from '../../next-seo.config';
 import MDXComponents from '../components/MDXComponents';
+import useFathom from '../hooks/useFathom';
 import * as gtag from '../lib/gtag';
 import { prismDarkTheme, prismLightTheme } from '../styles/prism';
 import theme from '../styles/theme';
@@ -45,6 +46,8 @@ const GlobalStyle = ({ children }) => {
 
 const App = ({ Component, pageProps }) => {
   const router = useRouter();
+  useFathom({ ID: 'PASLICBQ', domains: ['fallguysapi.com'] });
+
   useEffect(() => {
     const handleRouteChange = (url) => {
       if (process.env.NODE_ENV === 'production') {
